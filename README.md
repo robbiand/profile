@@ -25,10 +25,10 @@ This project is a simple yet responsive site that showcases who I am, my work, a
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/web-portfolio.git
+git clone https://github.com/robbiand/profile.git
 
 # Navigate to the project folder
-cd web-portfolio
+cd profile
 
 # Install dependencies
 npm install
