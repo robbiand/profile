@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   return (
-    <header className="w-full px-2 md:px-10 py-4 flex flex-row items-start">
+    <header className="w-full px-2 md:px-10 py-4 flex flex-row items-start fixed top-0 left-0 z-50 bg-white">
       <div className="py-1 mr-2 md:hidden">
         <button
           onClick={() => setMenuOpen(true)}
@@ -17,12 +17,12 @@ const Header = () => {
       <div className="flex flex-row justify-between w-full">
         <div className="flex flex-col items-start cursor-pointer hover:text-blue-500">
           <h1 className="text-2xl font-semibold">Andrian Robby</h1>
-          <span className="text-sm font-light">Frontend Developer</span>
+          <span className="text-sm font-light">Frontend Engineer</span>
         </div>
         <div className="hidden md:flex flex-row justify-end gap-2">
           <div className="flex flex-1 gap-2">
             <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Skills</div>
-            <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Projects</div>
+            <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Experience</div>
             <a
               id="linkedin-btn" 
               href="https://www.linkedin.com/in/andrian-robby-pratama-786401137/"
@@ -51,7 +51,7 @@ const Header = () => {
         </div>
         <nav className="flex flex-col gap-2 p-4 text-gray-950">
           <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Skills</div>
-          <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Projects</div>
+          <div className="px-4 py-2 hover:text-blue-500 flex items-center cursor-pointer">Experience</div>
           <a
             id="linkedin-btn" 
             href="https://www.linkedin.com/in/andrian-robby-pratama-786401137/"
