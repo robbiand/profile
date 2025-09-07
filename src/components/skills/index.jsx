@@ -7,6 +7,9 @@ const Skills = () => {
         <h3 className="font-semibold text-2xl">
           Skills & Tech Stack
         </h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          My skills and tech stack.
+        </p>
       </div>
       <div class="mt-6 space-y-6">
         <div>

@@ -7,6 +7,9 @@ const Companies = () => {
         <h3 className="font-semibold text-2xl">
           Experience / Career Timeline
         </h3>
+        <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
+          My experience and career timeline.
+        </p>
       </div>
       <div class="flex flex-col relative border-l border-gray-300 dark:border-gray-700 pl-6 mt-6">
         <div class="mb-10 relative">

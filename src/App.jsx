@@ -8,6 +8,7 @@ import Main from './components/main'
 import Skills from './components/skills'
 import Companies from './components/companies'
 import Projects from './components/projects'
+import Contact from './components/contact'
 
 export const App = () => {
   const swiperRef = useRef(null)
@@ -61,6 +62,11 @@ export const App = () => {
             className="p-4 max-h-full overflow-y-auto"
           >
             <Projects />
+          </SwiperSlide>
+          <SwiperSlide
+            className="p-4 max-h-full overflow-y-auto"
+          >
+            <Contact />
           </SwiperSlide>
         </Swiper>
       </div>
