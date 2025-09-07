@@ -7,11 +7,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],                 // untuk body text
-        heading: ['Montserrat', 'serif'],        // untuk judul
+        sans: ['Poppins', 'sans-serif'],
+        heading: ['Montserrat', 'serif'], 
+        code: ['Google Sans Code', 'serif'],
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 }
 

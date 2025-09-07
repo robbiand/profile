@@ -1,39 +1,70 @@
-import React from 'react'
-import Header from './components/header'
-import Footer from './components/footer'
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
+import Main from './components/main'
 import Skills from './components/skills'
 import Companies from './components/companies'
-
-import profilePic from './assets/profile.png'
+import Projects from './components/projects'
 
 export const App = () => {
+  const swiperRef = useRef(null)
+  const [darkMode, setDarkMode] = useState(true)
 
   return (
-    <main className="h-screen w-full max-w-screen-md m-auto text-gray-900">
-      <Header />
-      <div className="w-full flex flex-col md:flex-row md:justify-center items-center gap-4 p-4 md:px-8 py-28 mt-20">
-        <div className="px-2">
-          <img
-            src={profilePic}
-            className="w-[120px] md:w-52 rounded-full mx-auto"
-            alt="Profile picture"
-          />
-        </div>
-        <div className="px-2 flex flex-col gap-2 text-center md:text-left">
-          <h3 className="text-3xl">
-            Hi, I am <b>Andrian Robby Pratama</b>
-          </h3>
-          <div className="text-base md:text-lg font-light">
-            Frontend engineer. Web enthusiast. <br />Crafting clean interfaces & solid code.
+    <div
+      className={`h-screen flex justify-center bg-gray-100 p-2 ${
+        darkMode ? "dark bg-gray-900 text-gray-200" : "bg-white text-gray-900"
+      }`}
+    >
+      <div className="w-full max-w-[480px] relative max-h-screen md:border border-gray-200 dark:border-gray-700 rounded-lg">
+        <div className="w-full h-12 flex justify-between items-center p-4">
+          <div></div>
+          <div>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className="px-4 py-1 rounded-xl bg-gray-200 dark:bg-gray-700 shadow"
+            >
+              {darkMode ? "☀️" : "🌙"}
+            </button>
           </div>
         </div>
+
+        <Swiper
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={50}
+          slidesPerView={1}
+          className="h-[calc(100%-3rem)] overflow-y-auto p-4"
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper
+          }}
+        >
+          <SwiperSlide
+            className="p-4 max-h-full overflow-y-auto"
+          >
+            <Main onClickButton={() => swiperRef.current.slideNext()} />
+          </SwiperSlide>
+          <SwiperSlide
+            className="p-4 max-h-full overflow-y-auto"
+          >
+            <Skills />
+          </SwiperSlide>
+          <SwiperSlide
+            className="p-4 max-h-full overflow-y-auto"
+          >
+            <Companies />
+          </SwiperSlide>
+          <SwiperSlide
+            className="p-4 max-h-full overflow-y-auto"
+          >
+            <Projects />
+          </SwiperSlide>
+        </Swiper>
       </div>
-      <Skills />
-      <Companies />
-      <div className="h-10"></div>
-      <Footer />
-    </main>
+    </div>
   )
 }
 
