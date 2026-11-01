@@ -35,9 +35,8 @@
     <link rel="manifest" href="/site.webmanifest" />
     <script>
       try {
-        var saved = localStorage.getItem('theme')
-        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
-        if (dark) document.documentElement.classList.add('dark')
+        // Light by default; dark only if the visitor chose it before.
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark')
       } catch (e) {}
     </script>
   </head>
