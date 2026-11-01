@@ -1,9 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: 248 250 252;
+  --surface: 255 255 255;
+  --ink: 15 23 42;
+  --muted: 71 85 105;
+  --line: 226 232 240;
+  --brand: 11 95 217;
+  --brand-soft: 232 242 255;
+}
+
+.dark {
+  --bg: 11 18 32;
+  --surface: 17 26 46;
+  --ink: 248 250 252;
+  --muted: 148 163 184;
+  --line: 30 41 59;
+  --brand: 77 163 255;
+  --brand-soft: 20 40 74;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply font-sans;
+  @apply font-sans bg-bg text-ink antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

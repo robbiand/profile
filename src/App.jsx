@@ -1,76 +1,32 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import React from 'react'
 
-import Main from './components/main'
-import Skills from './components/skills'
-import Companies from './components/companies'
+import Navbar from './components/navbar'
+import Hero from './components/hero'
+import Experience from './components/experience'
+import TechStack from './components/tech-stack'
 import Projects from './components/projects'
 import Contact from './components/contact'
+import { nav } from './data/content'
+import { useTheme } from './hooks/useTheme'
+import { useActiveSection } from './hooks/useActiveSection'
+
+const sectionIds = nav.map(({ id }) => id)
 
 export const App = () => {
-  const swiperRef = useRef(null)
-  const [darkMode, setDarkMode] = useState(true)
+  const [dark, toggleTheme] = useTheme()
+  const active = useActiveSection(sectionIds)
 
   return (
-    <div
-      className={`h-screen flex justify-center bg-gray-100 p-2 ${
-        darkMode ? "dark bg-gray-900 text-gray-200" : "bg-white text-gray-900"
-      }`}
-    >
-      <div className="w-full max-w-[480px] relative max-h-screen md:border border-gray-200 dark:border-gray-700 rounded-lg">
-        <div className="w-full h-12 flex justify-between items-center p-4">
-          <div></div>
-          <div>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="px-4 py-1 rounded-xl bg-gray-200 dark:bg-gray-700 shadow"
-            >
-              {darkMode ? "☀️" : "🌙"}
-            </button>
-          </div>
-        </div>
-
-        <Swiper
-          modules={[Pagination]}
-          pagination={{ clickable: true }}
-          spaceBetween={50}
-          slidesPerView={1}
-          className="h-[calc(100%-3rem)] overflow-y-auto p-4"
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper
-          }}
-        >
-          <SwiperSlide
-            className="p-4 max-h-full overflow-y-auto"
-          >
-            <Main onClickButton={() => swiperRef.current.slideNext()} />
-          </SwiperSlide>
-          <SwiperSlide
-            className="p-4 max-h-full overflow-y-auto"
-          >
-            <Skills />
-          </SwiperSlide>
-          <SwiperSlide
-            className="p-4 max-h-full overflow-y-auto"
-          >
-            <Companies />
-          </SwiperSlide>
-          <SwiperSlide
-            className="p-4 max-h-full overflow-y-auto"
-          >
-            <Projects />
-          </SwiperSlide>
-          <SwiperSlide
-            className="p-4 max-h-full overflow-y-auto"
-          >
-            <Contact />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </div>
+    <>
+      <Navbar active={active} dark={dark} onToggleTheme={toggleTheme} />
+      <main className="mx-auto max-w-6xl px-5 sm:px-8">
+        <Hero />
+        <Experience />
+        <TechStack />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   )
 }
 
