@@ -1,37 +1,43 @@
-# 🌟 Andrian Robby Pratama | Frontend Engineer
+# Andrian Robby Pratama | Senior Frontend Engineer
 
-Welcome to my personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**.  
-This project is a simple yet responsive site that showcases who I am, my work, and how to connect with me.
+Personal portfolio website: [robbiand.github.io/profile](https://robbiand.github.io/profile/)
 
-## 🚀 Tech Stack
+Built with React 19, Vite 7, and Tailwind CSS 3. A static single page with a bento-style hero, experience cards, a tech stack section, and project cards with screenshot galleries.
 
-> This project is built using:
-- ⚛️ React (via Vite)
-- 💨 Tailwind CSS for fast styling
-- 📦 Vite for lightning-fast dev/build experience
+## Features
 
-## ✨ Features
+- Responsive layout (mobile, tablet, desktop) with a sticky navbar and active-section highlight
+- Light and dark mode (follows the system setting, remembers the choice)
+- Screenshot galleries with a keyboard-accessible lightbox
+- Open Graph and Twitter meta tags for link previews
 
-- 📱 **Responsive Design** – Optimized for mobile and desktop
-- 🌙 **Dark Mode Support** – Seamless switch between light and dark themes
-- 💼 **Project Highlights** – List of selected works with links
-- 📇 **Contact Section** – Easy way to get in touch via email or social
+## Project structure
 
-## 🖥️ Live Preview
+```
+src/
+  data/content.js      # all text, links, and image references live here
+  components/          # navbar, hero, experience, tech-stack, projects, contact
+  components/ui/       # Card, Badge, SectionHeading, Gallery
+  hooks/               # useTheme, useActiveSection
+  assets/              # profile photo and project screenshots (WebP)
+public/                # favicons, manifest, og-image.jpg
+```
 
-🌍 [Visit the Live Site](https://robbiand.github.io/profile/)
+To change content, edit `src/data/content.js`; no component changes are needed.
+Theme colors are CSS variables in `src/index.css`.
 
-## 🧑‍💻 Getting Started Locally
+## Getting started
+
+Requires Node.js 20.19+ or 22.12+ (Vite 7).
 
 ```bash
-# Clone the repository
-git clone https://github.com/robbiand/profile.git
-
-# Navigate to the project folder
-cd profile
-
-# Install dependencies
 npm install
+npm run dev       # local dev server
+npm run build     # production build into dist/
+npm run preview   # preview the production build
+```
 
-# Start the local development server
-npm run dev
+## Deployment
+
+Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes `dist/` to GitHub Pages.
+The production `base` path is `/profile/` (see `vite.config.mjs`).
