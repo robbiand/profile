@@ -1,0 +1,23 @@
+index.html
+  29f61f4c201b95b6 38-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "cb9b92fe65f2e56cb14a06d3733bfda2f222608a",
+  "prompts": {
+    "29f61f4c201b95b6": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "32b1375f-8fb5-4cc5-9ce7-e0a1d953b113",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andrian Robby <andrian.pratama@gdn-commerce.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 3,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
