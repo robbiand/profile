@@ -51,8 +51,9 @@ export const experience = [
     points: [
       'Led frontend architecture and design decisions for Blibli’s payment web platforms.',
       'Rebuilt the payment experience on Vue 3 as one solution shared across Web, Android, and iOS.',
+      'Built split payment and biometric payment flows for the checkout.',
       'Sped up pages with bundle reduction, code splitting, and lazy loading.',
-      'Helped migrate Blibli SIPLAH from Vue 2 to Vue 3.',
+      'Helped migrate Blibli SIPLAH and the Wallet & Paylater pages from Vue 2 to Vue 3, and moved them to Blibli’s new design system.',
     ],
     tech: ['Vue.js', 'TypeScript', 'Pinia', 'Vite'],
   },
@@ -105,13 +106,13 @@ export const techStack = [
     title: 'Backend & Fullstack',
     span: 'lg:col-span-3',
     core: [],
-    items: ['Node.js', 'Express.js', 'NestJS', 'AdonisJS', 'PHP', 'Laravel', 'Phalcon', 'CodeIgniter', 'MySQL', 'PostgreSQL'],
+    items: ['Node.js', 'Express.js', 'NestJS', 'AdonisJS', 'PHP', 'Laravel', 'Phalcon', 'CodeIgniter', 'Go', 'MySQL', 'PostgreSQL'],
   },
   {
     title: 'UI & Styling',
     span: 'lg:col-span-2',
     core: ['TailwindCSS'],
-    items: ['TailwindCSS', 'Sass', 'Material UI', 'Bootstrap', 'Styled Components'],
+    items: ['TailwindCSS', 'Sass', 'Material UI', 'Bootstrap', 'Styled Components', 'Design Systems', 'Figma'],
   },
   {
     title: 'Testing',
@@ -123,7 +124,7 @@ export const techStack = [
     title: 'Build & DevOps',
     span: 'lg:col-span-2',
     core: [],
-    items: ['Git', 'Vite', 'Webpack', 'Docker', 'Jenkins'],
+    items: ['Git', 'Vite', 'Webpack', 'Docker', 'Jenkins', 'ArgoCD', 'Cloudflare Workers', 'SonarQube', 'Claude Code'],
   },
   {
     title: 'Web Platform & Performance',
