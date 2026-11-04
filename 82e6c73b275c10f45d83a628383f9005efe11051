@@ -1,0 +1,25 @@
+src/index.css
+  73a608a9872b9a08 11
+src/components/navbar/index.jsx
+  73a608a9872b9a08 32
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "82e6c73b275c10f45d83a628383f9005efe11051",
+  "prompts": {
+    "73a608a9872b9a08": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2f663c1b-8fc5-46c1-820e-2217d677c3e6",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andrian Robby <andrian.pratama@gdn-commerce.com>",
+      "messages": [],
+      "total_additions": 7,
+      "total_deletions": 10,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    }
+  }
+}
