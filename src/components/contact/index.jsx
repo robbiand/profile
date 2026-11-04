@@ -4,6 +4,7 @@ import Card from '../ui/Card'
 import SectionHeading from '../ui/SectionHeading'
 import { contacts } from '../../data/content'
 
+const tints = ['bg-brand-soft text-brand', 'bg-accent-soft text-accent', 'bg-berry-soft text-berry', 'bg-brand-soft text-brand']
 const icons = { mail: Mail, linkedin: Linkedin, github: Github, phone: Phone }
 
 const Contact = () => (
@@ -11,7 +12,7 @@ const Contact = () => (
     <SectionHeading title="Contact" description="Open to discussing work opportunities and collaboration." />
 
     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {contacts.map(({ label, value, href, icon }) => {
+      {contacts.map(({ label, value, href, icon }, i) => {
         const Icon = icons[icon]
         return (
           <a
@@ -22,7 +23,7 @@ const Contact = () => (
             className="group block"
           >
             <Card className="flex items-center gap-4 group-hover:border-brand">
-              <span className="rounded-lg bg-brand-soft p-3 text-brand">
+              <span className={`rounded-lg p-3 ${tints[i % tints.length]}`}>
                 <Icon size={20} />
               </span>
               <span className="min-w-0">

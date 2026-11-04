@@ -6,7 +6,7 @@ const hasPadding = (className) => /(^|\s)(\w+:)?p-\d/.test(className)
 
 const Card = ({ as: Tag = 'div', className = '', children }) => (
   <Tag
-    className={`rounded-2xl border border-line bg-surface shadow-sm transition-shadow hover:shadow-md ${
+    className={`rounded-lg border border-navy/30 dark:border-line bg-transparent shadow-sm transition-shadow hover:shadow-md ${
       hasPadding(className) ? '' : 'p-6'
     } ${className}`}
   >

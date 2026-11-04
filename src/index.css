@@ -3,23 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --bg: 248 250 252;
-  --surface: 255 255 255;
-  --ink: 15 23 42;
-  --muted: 71 85 105;
-  --line: 226 232 240;
-  --brand: 11 95 217;
-  --brand-soft: 232 242 255;
+  --bg: 255 255 255;
+  --surface: 245 248 255; /* snow #F5F8FF */
+  --ink: 18 38 58; /* navy #12263A */
+  --muted: 79 97 117;
+  --line: 185 214 242; /* sky #B9D6F2 */
+  --brand: 18 38 58; /* navy #12263A */
+  --brand-soft: 227 238 251; /* sky #B9D6F2 tint */
+  --accent: 20 116 111; /* teal #14746F */
+  --accent-soft: 224 242 240;
+  --berry: 90 26 50; /* wine #5A1A32 */
+  --berry-soft: 246 230 236;
 }
 
 .dark {
-  --bg: 11 18 32;
-  --surface: 17 26 46;
-  --ink: 248 250 252;
-  --muted: 148 163 184;
-  --line: 30 41 59;
-  --brand: 77 163 255;
-  --brand-soft: 20 40 74;
+  --bg: 10 20 31;
+  --surface: 18 38 58; /* navy #12263A */
+  --ink: 245 248 255;
+  --muted: 160 182 207;
+  --line: 33 58 84;
+  --brand: 185 214 242; /* sky #B9D6F2 */
+  --brand-soft: 20 52 90;
+  --accent: 88 196 188;
+  --accent-soft: 16 62 60;
+  --berry: 240 160 184;
+  --berry-soft: 70 26 46;
 }
 
 html {

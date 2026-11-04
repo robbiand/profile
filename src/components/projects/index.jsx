@@ -18,8 +18,8 @@ const Projects = () => (
           className={`flex flex-col ${project.featured ? 'md:col-span-2' : ''}`}
         >
           {project.highlight && (
-            <p className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">
-              <span className="h-1.5 w-1.5 rounded-full bg-brand" aria-hidden />
+            <p className="mb-3 inline-flex w-fit items-center gap-2 rounded-full bg-berry-soft px-3 py-1 text-xs font-semibold text-berry">
+              <span className="h-1.5 w-1.5 rounded-full bg-berry" aria-hidden />
               {project.highlight}
             </p>
           )}
