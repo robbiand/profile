@@ -3,6 +3,8 @@ import profilePic from './../../assets/profile.webp'
 import Card from '../ui/Card'
 import { profile, stats } from '../../data/content'
 
+const statColors = ['text-brand', 'text-accent', 'text-berry']
+
 const Hero = () => (
   <section id="about" className="scroll-mt-20 py-10 md:py-16">
     <div className="grid grid-cols-1 gap-4 md:grid-cols-6">
@@ -40,9 +42,9 @@ const Hero = () => (
         />
       </Card>
 
-      {stats.map(({ value, label, small }) => (
+      {stats.map(({ value, label, small }, i) => (
         <Card key={label} className="md:col-span-2">
-          <p className={`font-bold tracking-tight text-brand ${small ? 'text-xl leading-9' : 'text-4xl'}`}>{value}</p>
+          <p className={`font-bold tracking-tight ${statColors[i % statColors.length]} ${small ? 'text-xl leading-9' : 'text-4xl'}`}>{value}</p>
           <p className="mt-1 text-sm text-muted">{label}</p>
         </Card>
       ))}

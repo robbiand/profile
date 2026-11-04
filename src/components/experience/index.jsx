@@ -13,7 +13,7 @@ const Experience = () => (
         <Card key={job.company} as="article" className="flex flex-col">
           <p className="text-xs font-semibold uppercase tracking-wide text-muted">{job.period}</p>
           <h3 className="mt-2 text-lg font-bold">{job.role}</h3>
-          <p className="text-sm font-medium text-brand">{job.company}</p>
+          <p className="text-sm font-medium text-accent">{job.company}</p>
 
           <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-relaxed text-muted marker:text-muted">
             {job.points.map((point) => (
