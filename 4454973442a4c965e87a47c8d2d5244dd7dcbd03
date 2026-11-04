@@ -1,0 +1,23 @@
+src/components/hero/__tests__/index.test.jsx
+  73a608a9872b9a08 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.23",
+  "base_commit_sha": "4454973442a4c965e87a47c8d2d5244dd7dcbd03",
+  "prompts": {
+    "73a608a9872b9a08": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2f663c1b-8fc5-46c1-820e-2217d677c3e6",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "Andrian Robby <andrian.pratama@gdn-commerce.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
